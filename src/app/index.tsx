@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native"
 export default function Page() {
 	return (
 		<View style={styles.container}>
-			<Text>Open ng on your app!</Text>
+			<Text className="text-4xl">Open ng on your app!</Text>
 			<StatusBar style="auto" />
 		</View>
 	)

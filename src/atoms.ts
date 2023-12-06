@@ -1,3 +1,3 @@
-import { atom } from "jotai"
+import { atomWithStorage } from "./utils/atomWithStorage"
 
-export const userUIDAtom = atom<string | undefined>(undefined)
+export const userUIDAtom = atomWithStorage<string | undefined>("userUID", undefined)

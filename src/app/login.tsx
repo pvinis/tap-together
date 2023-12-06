@@ -11,7 +11,7 @@ export default function Page() {
 
 	return (
 		<View className="items-center justify-center flex-1">
-			<Text className="text-4xl">Login</Text>
+			<Text className="text-4xl">Login!!</Text>
 			<TextInput value={email} onChangeText={setEmail} className="border w-full" />
 			<TextInput value={password} onChangeText={setPassword} className="border w-full" />
 			<Button

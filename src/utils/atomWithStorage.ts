@@ -1,33 +1,14 @@
 import { atomWithStorage as atomWithStorageOrig, createJSONStorage } from "jotai/utils"
-import { MMKV } from "react-native-mmkv"
-
-const storage = new MMKV()
-
-function getItem<T>(key: string): T | null {
-	const value = storage.getString(key)
-	return value ? JSON.parse(value) : null
-}
-
-function setItem<T>(key: string, value: T): void {
-	storage.set(key, JSON.stringify(value))
-}
-
-function removeItem(key: string): void {
-	storage.delete(key)
-}
-
-function clearAll(): void {
-	storage.clearAll()
-}
+import { MMKVStorage } from "./AsyncStorageMMKV"
 
 export const atomWithStorage = <T>(key: string, initialValue: T) =>
 	atomWithStorageOrig<T>(
 		key,
 		initialValue,
 		createJSONStorage<T>(() => ({
-			getItem,
-			setItem,
-			removeItem,
-			clearAll,
+			getItem: MMKVStorage.getItem,
+			setItem: MMKVStorage.setItem,
+			removeItem: MMKVStorage.removeItem,
+			clearAll: MMKVStorage.clearAll,
 		}))
 	)

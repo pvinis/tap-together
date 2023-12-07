@@ -21,10 +21,6 @@
     "doctor:fix": "pnpx expo@latest install --check",
     "prebuild": "pnpx expo@latest prebuild"
   },
-  "overrides": {
-    "@babel/preset-env": "7.1.6",
-    "metro": "0.76.7"
-  },
   "dependencies": {
     "@alevy97/react-native-userdefaults": "^0.2.1",
     "@types/react": "~18.2.14",
@@ -54,6 +50,10 @@
   "pnpm": {
     "patchedDependencies": {
       "react-native-widget-extension@0.0.5": "patches/react-native-widget-extension@0.0.5.patch"
+    },
+    "overrides": {
+      "@babel/preset-env": "7.1.6",
+      "metro": "~0.76.7"
     }
   }
 }

@@ -5,13 +5,11 @@ import { signOut } from "firebase/auth"
 import { userUIDAtom } from "../../atoms"
 import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
-import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore"
-import {
-	areActivitiesEnabled,
-	startActivity,
-	updateActivity,
-	endActivity,
-} from "react-native-widget-extension"
+import { addDoc, collection, onSnapshot } from "firebase/firestore"
+import { startActivity } from "react-native-widget-extension"
+import UserDefaults from "@alevy97/react-native-userdefaults"
+
+const groupDefaults = new UserDefaults("group.is.pvin.tap-together")
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)
@@ -24,8 +22,9 @@ export default function Main() {
 
 		const unsub = onSnapshot(
 			query,
-			(querySnapshot) => {
+			async (querySnapshot) => {
 				setTaps(querySnapshot.size)
+				await groupDefaults.set("taps", querySnapshot.size)
 			},
 			(err) => {
 				console.log(`Encountered error: ${err}`)

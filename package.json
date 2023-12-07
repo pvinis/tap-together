@@ -50,10 +50,6 @@
   "pnpm": {
     "patchedDependencies": {
       "react-native-widget-extension@0.0.5": "patches/react-native-widget-extension@0.0.5.patch"
-    },
-    "overrides": {
-      "@babel/preset-env": "7.1.6",
-      "metro": "~0.76.7"
     }
   }
 }

@@ -9,7 +9,7 @@ import { addDoc, collection, onSnapshot } from "firebase/firestore"
 import { startActivity } from "react-native-widget-extension"
 import UserDefaults from "@alevy97/react-native-userdefaults"
 
-const groupDefaults = new UserDefaults("group.is.pvin.tap-together")
+const groupDefaults = new UserDefaults("group.is.pvin.tap-together.widgets")
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)

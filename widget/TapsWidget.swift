@@ -55,8 +55,8 @@ struct TapsWidget: Widget {
         .padding()
         .background()
     }
-    .configurationDisplayName("My Widget")
-    .description("This is an example widget.")
+    .configurationDisplayName("Global Taps")
+    .description("Keep track of global taps.")
   }
 }
 

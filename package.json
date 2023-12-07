@@ -1,15 +1,16 @@
 {
   "name": "tap-together",
   "version": "0.2.0",
-  "build": 11,
+  "build": 12,
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
+    "bump": "jaq -i '.build|=.+1' package.json; git add package.json; git commit -m 'bump build'",
     "eas": "pnpx eas-cli@latest",
     "build:dev:all": "pnpm eas build --platform all --profile development",
-    "build:dev:ios": "jaq -i '.build|=.+1' package.json; git add package.json; git commit -m 'bump build'; pnpm eas build --platform ios --profile development",
+    "build:dev:ios": "pnpm eas build --platform ios --profile development",
     "build:prod:all": "pnpm eas build --platform all --profile production",
     "build:prod:ios": "pnpm eas build --platform ios --profile production",
     "devclient:ios": "pnpm eas build:run -p ios",

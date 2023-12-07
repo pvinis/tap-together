@@ -7,9 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eas": "bun x eas-cli@latest",
-    "build:dev": "bun eas build -p ios --profile development",
-    "build:prod": "bun eas build -p ios --profile production",
+    "build:dev": "bun eas build --profile development",
+    "build:prod": "bun eas build --profile production",
     "devclient:ios": "bun eas build:run -p ios",
+    "devclient:android": "bun eas build:run -p android",
     "doctor": "bun x expo-doctor@latest",
     "doctor:fix": "bun x expo@latest install --check"
   },

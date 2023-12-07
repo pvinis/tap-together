@@ -3,13 +3,17 @@ import { useAtom } from "jotai"
 import { useState } from "react"
 import { Button, Text, TextInput, View } from "react-native"
 import { auth } from "../firebaseConfig"
-import { Link } from "expo-router"
 import { userUIDAtom } from "../atoms"
+import { useRouter } from "expo-router"
 
-export default function Page() {
+export default function Login() {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [, setUserUID] = useAtom(userUIDAtom)
+	const router = useRouter()
+
+	const [mode, setMode] = useState<"signup" | "login">("login")
+	const toggleMode = () => setMode(mode === "login" ? "signup" : "login")
 
 	return (
 		<View className="items-center justify-center flex-1">
@@ -20,16 +24,17 @@ export default function Page() {
 				title="Login"
 				onPress={async () => {
 					try {
-						// const userCred = await createUserWithEmailAndPassword(auth, email, password)
+						/// const userCred = await createUserWithEmailAndPassword(auth, email, password)
 						const userCred = await signInWithEmailAndPassword(auth, email, password)
 						const user = userCred.user
 						setUserUID(user.uid)
+						router.replace("/(auth)")
 					} catch (error) {
 						console.log({ error })
 					}
 				}}
 			/>
-			<Link href="/taps">Signup</Link>
+			<Button title={(mode === "login" ? "Sign up" : "Log in") + " instead"} onPress={toggleMode} />
 		</View>
 	)
 }

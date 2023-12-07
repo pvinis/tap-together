@@ -1,10 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite"
-
-// Optionally import the services that you want to use
-// import {...} from "firebase/auth";
-// import {...} from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 
 const firebaseConfig = {
 }

@@ -3,11 +3,11 @@ import WidgetKit
 
 struct Provider: TimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(date: Date(), emoji: "😀")
+    SimpleEntry(date: Date(), taps: 888)
   }
 
   func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-    let entry = SimpleEntry(date: Date(), emoji: "😀")
+    let entry = SimpleEntry(date: Date(), taps: 800)
     completion(entry)
   }
 
@@ -18,7 +18,7 @@ struct Provider: TimelineProvider {
     let currentDate = Date()
     for hourOffset in 0..<5 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = SimpleEntry(date: entryDate, emoji: "😀")
+      let entry = SimpleEntry(date: entryDate, taps: 3000)
       entries.append(entry)
     }
 
@@ -29,19 +29,22 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
   let date: Date
-  let emoji: String
+  let taps: Int
 }
 
 struct TapsWidgetEntryView: View {
+  @Environment(\.widgetFamily) private var family
+
   var entry: Provider.Entry
 
   var body: some View {
-    VStack {
-      Text("Time:")
-      Text(entry.date, style: .time)
-
-      Text("Emoji:")
-      Text(entry.emoji)
+    if family == .accessoryInline {
+      Text("Taps: \(entry.taps)")
+    } else {
+      VStack {
+        Text("Taps:")
+        Text(String(entry.taps))
+      }
     }
   }
 }
@@ -61,8 +64,7 @@ struct TapsWidget: Widget {
 }
 
 // #Preview(as: .systemSmall) {
-//     TapsWidget()
+//   TapsWidget()
 // } timeline: {
-//     SimpleEntry(date: .now, emoji: "😀")
-//     SimpleEntry(date: .now, emoji: "🤩")
+//   SimpleEntry(date: .now, taps: 999_999_999_999_999_999)
 // }

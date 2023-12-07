@@ -15,8 +15,8 @@
     "devclient:android": "pnpm run eas build:run -p android",
     "build:prod:all": "pnpm run eas build --no-wait --non-interactive --platform all --profile production",
     "build:prod:ios": "pnpm run eas build --no-wait --non-interactive --platform ios --profile production",
-    "submit:ios": "pnpm run eas submit --non-interactive --platform ios",
-    "submit:android": "pnpm run eas submit --non-interactive --platform android",
+    "submit:ios": "pnpm run eas submit --no-wait --non-interactive --platform ios --latest",
+    "submit:android": "pnpm run eas submit --no-wait --non-interactive --platform android --latest",
     "doctor": "pnpx expo-doctor@latest",
     "doctor:fix": "pnpx expo@latest install --check",
     "prebuild": "pnpx expo@latest prebuild"

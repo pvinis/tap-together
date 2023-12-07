@@ -14,7 +14,8 @@
     "devclient:ios": "pnpm eas build:run -p ios",
     "devclient:android": "pnpm eas build:run -p android",
     "doctor": "pnpx expo-doctor@latest",
-    "doctor:fix": "pnpx expo@latest install --check"
+    "doctor:fix": "pnpx expo@latest install --check",
+    "prebuild": "pnpx expo@latest prebuild"
   },
   "dependencies": {
     "@types/react": "~18.2.14",

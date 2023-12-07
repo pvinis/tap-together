@@ -25,9 +25,14 @@
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
-			}
+			},
+			"package": "is.pvin.tap_together"
 		},
-		"plugins": ["expo-router"],
+		"plugins": [
+			"expo-router",
+			"react-native-widget-extension",
+			["react-native-widget-extension", { "widgetsFolder": "widget" }]
+		],
 		"experiments": {
 			"typedRoutes": true
 		},

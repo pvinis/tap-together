@@ -6,6 +6,12 @@ import { userUIDAtom } from "../../atoms"
 import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
 import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore"
+import {
+	areActivitiesEnabled,
+	startActivity,
+	updateActivity,
+	endActivity,
+} from "react-native-widget-extension"
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)
@@ -13,6 +19,7 @@ export default function Main() {
 	const [taps, setTaps] = useState<number | null>(null)
 
 	useEffect(() => {
+		startActivity(3, "4343", "$32.23", 47, 43)
 		const query = collection(db, "taps")
 
 		const unsub = onSnapshot(

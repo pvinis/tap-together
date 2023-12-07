@@ -1,5 +1,5 @@
 import { atomWithStorage as atomWithStorageOrig, createJSONStorage } from "jotai/utils"
-import { MMKVStorage } from "./AsyncStorageMMKV"
+import { MMKVStorage } from "./MMKVStorage"
 
 export const atomWithStorage = <T>(key: string, initialValue: T) =>
 	atomWithStorageOrig<T>(

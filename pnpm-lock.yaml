@@ -69,8 +69,8 @@ dependencies:
     specifier: ~3.22.0
     version: 3.22.1(react-native@0.72.6)(react@18.2.0)
   react-native-widget-extension:
-    specifier: ^0.0.5
-    version: 0.0.5(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0)
+    specifier: https://github.com/moodworksinc/react-native-widget-extension
+    version: github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0)
   typescript:
     specifier: ^5.1.3
     version: 5.3.3
@@ -6602,22 +6602,6 @@ packages:
       warn-once: 0.1.1
     dev: false
 
-  /react-native-widget-extension@0.0.5(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0):
-    resolution: {integrity: sha512-47lpY7HeOS9mUwv5L5xPVTFLAegHK5m+s+W7v0UN4xt/FY9i1IrTlaF2LkIt3cKQBIrZiXB0Q5S8e9M6jrVhGQ==}
-    peerDependencies:
-      expo: '*'
-      react: '*'
-      react-native: '*'
-    dependencies:
-      '@expo/config-plugins': 7.2.5
-      expo: 49.0.21(@babel/core@7.23.5)
-      react: 18.2.0
-      react-native: 0.72.6(@babel/core@7.23.5)(@babel/preset-env@7.1.6)(react@18.2.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-    patched: true
-
   /react-native@0.72.6(@babel/core@7.23.5)(@babel/preset-env@7.1.6)(react@18.2.0):
     resolution: {integrity: sha512-RafPY2gM7mcrFySS8TL8x+TIO3q7oAlHpzEmC7Im6pmXni6n1AuufGaVh0Narbr1daxstw7yW7T9BKW5dpVc2A==}
     engines: {node: '>=16'}
@@ -7969,3 +7953,22 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: false
+
+  github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/moodworksinc/react-native-widget-extension/tar.gz/c32c46cbb1bc1c5a29bb972ba35bb815627096c8}
+    id: github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8
+    name: react-native-widget-extension
+    version: 0.0.5
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
+    dependencies:
+      '@expo/config-plugins': 7.2.5
+      expo: 49.0.21(@babel/core@7.23.5)
+      react: 18.2.0
+      react-native: 0.72.6(@babel/core@7.23.5)(@babel/preset-env@7.1.6)(react@18.2.0)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+    patched: true

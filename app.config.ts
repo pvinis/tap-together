@@ -18,7 +18,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 	assetBundlePatterns: ["**/*"],
 	ios: {
 		bundleIdentifier: "is.pvin.tap-together",
-		buildNumber: packageJson.version.toString(),
+		buildNumber: packageJson.build.toString(),
 		supportsTablet: true,
 		config: {
 			usesNonExemptEncryption: false,

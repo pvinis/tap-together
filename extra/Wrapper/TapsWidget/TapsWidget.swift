@@ -65,9 +65,9 @@ struct TapsWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    TapsWidget()
-} timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
-}
+// #Preview(as: .systemSmall) {
+//     TapsWidget()
+// } timeline: {
+//     SimpleEntry(date: .now, emoji: "😀")
+//     SimpleEntry(date: .now, emoji: "🤩")
+// }

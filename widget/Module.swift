@@ -9,7 +9,7 @@ internal class MissingCurrentWindowSceneException: Exception {
 
 public class ReactNativeWidgetExtensionModule: Module {
     public func definition() -> ModuleDefinition {
-        Name("TapsWidget")
+        Name("ReactNativeWidgetExtension")
 
         Function("areActivitiesEnabled") { () -> Bool in
             let logger = Logger()

@@ -1,0 +1,19 @@
+diff --git a/plugin/build/withPodfile.js b/plugin/build/withPodfile.js
+index 3a4bfa8ae45373a0beac15ecf80f6969f0c64f57..5f85ea2444446b258b70a7c58336299dbe7599dc 100644
+--- a/plugin/build/withPodfile.js
++++ b/plugin/build/withPodfile.js
+@@ -67,12 +67,12 @@ const withPodfile = (config, { targetName }) => {
+               comment: "#",
+             }).contents; */
+             podFileContent = podFileContent
+-                .concat(`\n\n# >>> Inserted by react-native-widget-extension\n`)
++                .concat(`\n\n# >>> Inserted by react-native-widget-extension start\n`)
+                 .concat(`target '${targetName}' do
+             use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
+             use_frameworks! :linkage => ENV['USE_FRAMEWORKS'].to_sym if ENV['USE_FRAMEWORKS']
+           end`)
+-                .concat(`\n# >>> Inserted by react-native-widget-extension`);
++                .concat(`\n# >>> Inserted by react-native-widget-extension end\n`);
+             fs.writeFileSync(podFilePath, podFileContent);
+             return config;
+         },

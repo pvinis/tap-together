@@ -15,7 +15,7 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"bundleIdentifier": "is.pvin.tap-together",
-			"buildNumber": "3",
+			"buildNumber": "4",
 			"supportsTablet": true,
 			"config": {
 				"usesNonExemptEncryption": false
@@ -30,8 +30,7 @@
 		},
 		"plugins": [
 			"expo-router",
-			"react-native-widget-extension",
-			["react-native-widget-extension", { "widgetsFolder": "widget" }]
+			["react-native-widget-extension", { "frequentUpdates": false, "widgetsFolder": "widget" }]
 		],
 		"experiments": {
 			"typedRoutes": true

@@ -19,7 +19,7 @@ export default function Main() {
 	const [taps, setTaps] = useState<number | null>(null)
 
 	useEffect(() => {
-		startActivity(3, "4343", "$32.23", 47, 43)
+		startActivity("LOL WOW")
 		const query = collection(db, "taps")
 
 		const unsub = onSnapshot(

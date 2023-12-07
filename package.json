@@ -4,11 +4,13 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "eas": "bun x eas-cli@latest",
-    "build:dev": "bun eas build --profile development",
-    "build:prod": "bun eas build --profile production",
+    "build:dev:all": "bun eas build --platform all --profile development",
+    "build:dev:ios": "bun eas build --platform ios --profile development",
+    "build:prod:all": "bun eas build --platform all --profile production",
+    "build:prod:ios": "bun eas build --platform ios --profile production",
     "devclient:ios": "bun eas build:run -p ios",
     "devclient:android": "bun eas build:run -p android",
     "doctor": "bun x expo-doctor@latest",
@@ -32,7 +34,8 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-widget-extension": "^0.0.5",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "expo-splash-screen": "~0.20.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",

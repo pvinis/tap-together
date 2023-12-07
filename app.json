@@ -15,7 +15,11 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"bundleIdentifier": "is.pvin.tap-together",
-			"supportsTablet": true
+			"buildNumber": "3",
+			"supportsTablet": true,
+			"config": {
+				"usesNonExemptEncryption": false
+			}
 		},
 		"android": {
 			"adaptiveIcon": {

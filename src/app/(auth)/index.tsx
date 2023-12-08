@@ -6,7 +6,6 @@ import { userUIDAtom } from "../../atoms"
 import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
-import { startActivity } from "react-native-widget-extension"
 import SmartSettings from "local:smart-settings"
 
 export default function Main() {
@@ -15,7 +14,6 @@ export default function Main() {
 	const [taps, setTaps] = useState<number | null>(null)
 
 	useEffect(() => {
-		startActivity("LOL WOW")
 		const query = collection(db, "taps")
 
 		const unsub = onSnapshot(
@@ -41,7 +39,7 @@ export default function Main() {
 				title="tap tap tap!"
 				onPress={async () => {
 					const tapsRef = collection(db, "taps")
-					await addDoc(tapsRef, { userUID: userUID })
+					await addDoc(tapsRef, { userUID })
 				}}
 			/>
 			<Button

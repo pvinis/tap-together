@@ -35,14 +35,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 		package: "is.pvin.tap_together",
 		versionCode: packageJson.build,
 	},
-	plugins: [
-		"expo-router",
-		["react-native-widget-extension", { frequentUpdates: false, widgetsFolder: "widget" }],
-		["@bacons/apple-targets", { teamId: "118413409" }],
-	],
-	experiments: {
-		typedRoutes: true,
-	},
+	plugins: ["expo-router", ["@bacons/apple-targets", { teamId: "CAG2W9M777" }]],
+	experiments: { typedRoutes: true },
 	extra: {
 		eas: {
 			projectId: "9903e8a0-3361-4bdd-abe4-be3890ea1f68",

@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  react-native-widget-extension@0.0.5:
-    hash: keg4sugqtsuzo2fu4z7d6hmzdu
-    path: patches/react-native-widget-extension@0.0.5.patch
-
 dependencies:
   '@bacons/apple-targets':
     specifier: ^0.0.0
@@ -64,9 +59,6 @@ dependencies:
   react-native-screens:
     specifier: ~3.22.0
     version: 3.22.1(react-native@0.72.6)(react@18.2.0)
-  react-native-widget-extension:
-    specifier: https://github.com/moodworksinc/react-native-widget-extension
-    version: github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0)
   typescript:
     specifier: ^5.1.3
     version: 5.3.3
@@ -8445,22 +8437,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: false
-
-  github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/moodworksinc/react-native-widget-extension/tar.gz/c32c46cbb1bc1c5a29bb972ba35bb815627096c8}
-    id: github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8
-    name: react-native-widget-extension
-    version: 0.0.5
-    peerDependencies:
-      expo: '*'
-      react: '*'
-      react-native: '*'
-    dependencies:
-      '@expo/config-plugins': 7.2.5
-      expo: 49.0.21(@babel/core@7.23.5)
-      react: 18.2.0
-      react-native: 0.72.6(@babel/core@7.23.5)(@babel/preset-env@7.23.5)(react@18.2.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-    patched: true

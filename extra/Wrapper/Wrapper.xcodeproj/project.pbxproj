@@ -13,8 +13,8 @@
 		1A5B9ECB2B21EA8100F6D6AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5B9ECA2B21EA8100F6D6AB /* Preview Assets.xcassets */; };
 		1A5B9ED82B21EAB000F6D6AB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5B9ED72B21EAB000F6D6AB /* WidgetKit.framework */; };
 		1A5B9EDA2B21EAB000F6D6AB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5B9ED92B21EAB000F6D6AB /* SwiftUI.framework */; };
-		1A5B9EDD2B21EAB000F6D6AB /* TapsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B9EDC2B21EAB000F6D6AB /* TapsWidgetBundle.swift */; };
-		1A5B9EDF2B21EAB000F6D6AB /* TapsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B9EDE2B21EAB000F6D6AB /* TapsWidget.swift */; };
+		1A5B9EDD2B21EAB000F6D6AB /* index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B9EDC2B21EAB000F6D6AB /* index.swift */; };
+		1A5B9EDF2B21EAB000F6D6AB /* widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B9EDE2B21EAB000F6D6AB /* widgets.swift */; };
 		1A5B9EE12B21EAB100F6D6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5B9EE02B21EAB100F6D6AB /* Assets.xcassets */; };
 		1A5B9EE52B21EAB100F6D6AB /* TapsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1A5B9ED52B21EAB000F6D6AB /* TapsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,8 +52,8 @@
 		1A5B9ED52B21EAB000F6D6AB /* TapsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TapsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5B9ED72B21EAB000F6D6AB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1A5B9ED92B21EAB000F6D6AB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		1A5B9EDC2B21EAB000F6D6AB /* TapsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapsWidgetBundle.swift; sourceTree = "<group>"; };
-		1A5B9EDE2B21EAB000F6D6AB /* TapsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapsWidget.swift; sourceTree = "<group>"; };
+		1A5B9EDC2B21EAB000F6D6AB /* index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = index.swift; sourceTree = "<group>"; };
+		1A5B9EDE2B21EAB000F6D6AB /* widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgets.swift; sourceTree = "<group>"; };
 		1A5B9EE02B21EAB100F6D6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5B9EE22B21EAB100F6D6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +128,8 @@
 		1A5B9EDB2B21EAB000F6D6AB /* TapsWidget */ = {
 			isa = PBXGroup;
 			children = (
-				1A5B9EDC2B21EAB000F6D6AB /* TapsWidgetBundle.swift */,
-				1A5B9EDE2B21EAB000F6D6AB /* TapsWidget.swift */,
+				1A5B9EDC2B21EAB000F6D6AB /* index.swift */,
+				1A5B9EDE2B21EAB000F6D6AB /* widgets.swift */,
 				1A5B9EE02B21EAB100F6D6AB /* Assets.xcassets */,
 				1A5B9EE22B21EAB100F6D6AB /* Info.plist */,
 			);
@@ -246,8 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5B9EDD2B21EAB000F6D6AB /* TapsWidgetBundle.swift in Sources */,
-				1A5B9EDF2B21EAB000F6D6AB /* TapsWidget.swift in Sources */,
+				1A5B9EDD2B21EAB000F6D6AB /* index.swift in Sources */,
+				1A5B9EDF2B21EAB000F6D6AB /* widgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

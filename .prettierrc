@@ -9,6 +9,13 @@
 				"useTabs": false,
 				"tabWidth": 4
 			}
+		},
+		{
+			"files": "package.json",
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
+			}
 		}
 	]
 }

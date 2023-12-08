@@ -58,15 +58,16 @@ struct TapsWidget: Widget {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
       TapsWidgetEntryView(entry: entry)
         .padding()
-        .background()
+        .containerBackground(.background, for: .widget)
     }
     .configurationDisplayName("Global Taps")
     .description("Keep track of global taps.")
+    .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline])
   }
 }
 
-// #Preview(as: .systemSmall) {
-//   TapsWidget()
-// } timeline: {
-//   SimpleEntry(date: .now, taps: 999_999_999_999_999_999)
-// }
+#Preview(as: .systemSmall) {
+  TapsWidget()
+} timeline: {
+  SimpleEntry(date: .now, taps: 999_999_999_999_999_999)
+}

@@ -10,9 +10,9 @@ patchedDependencies:
     path: patches/react-native-widget-extension@0.0.5.patch
 
 dependencies:
-  '@alevy97/react-native-userdefaults':
-    specifier: ^0.2.1
-    version: 0.2.1(expo@49.0.21)(react-native@0.72.6)(react@18.2.0)
+  '@bacons/apple-targets':
+    specifier: https://github.com/EvanBacon/expo-apple-targets/
+    version: github.com/EvanBacon/expo-apple-targets/1e4ff6e641ff24a2a57ca65b76cf2eab2931f2c2
   '@types/react':
     specifier: ~18.2.14
     version: 18.2.42
@@ -80,18 +80,6 @@ devDependencies:
     version: 3.3.2
 
 packages:
-
-  /@alevy97/react-native-userdefaults@0.2.1(expo@49.0.21)(react-native@0.72.6)(react@18.2.0):
-    resolution: {integrity: sha512-gvgJ0iDnJW70NurbgOCZP9fROPRJ5vDNghlQeXpkbR3NNPFXOhu83pUYIBhWTA6i7NhOvVtSeTEVDSxCCtbftg==}
-    peerDependencies:
-      expo: '*'
-      react: '*'
-      react-native: '*'
-    dependencies:
-      expo: 49.0.21(@babel/core@7.23.5)
-      react: 18.2.0
-      react-native: 0.72.6(@babel/core@7.23.5)(@babel/preset-env@7.23.5)(react@18.2.0)
-    dev: false
 
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -8303,6 +8291,13 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  github.com/EvanBacon/expo-apple-targets/1e4ff6e641ff24a2a57ca65b76cf2eab2931f2c2:
+    resolution: {tarball: https://codeload.github.com/EvanBacon/expo-apple-targets/tar.gz/1e4ff6e641ff24a2a57ca65b76cf2eab2931f2c2}
+    name: '@bacons/apple-targets-repo'
+    version: 1.0.0
+    requiresBuild: true
     dev: false
 
   github.com/moodworksinc/react-native-widget-extension/c32c46cbb1bc1c5a29bb972ba35bb815627096c8(patch_hash=keg4sugqtsuzo2fu4z7d6hmzdu)(expo@49.0.21)(react-native@0.72.6)(react@18.2.0):

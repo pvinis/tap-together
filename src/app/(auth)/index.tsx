@@ -7,9 +7,7 @@ import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
 import { startActivity } from "react-native-widget-extension"
-import UserDefaults from "@alevy97/react-native-userdefaults"
-
-const groupDefaults = new UserDefaults("group.is.pvin.tap-together.widgets")
+import SmartSettings from "local:smart-settings"
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)
@@ -24,7 +22,7 @@ export default function Main() {
 			query,
 			async (querySnapshot) => {
 				setTaps(querySnapshot.size)
-				await groupDefaults.set("taps", querySnapshot.size)
+				SmartSettings.set("taps", querySnapshot.size, "group.is.pvin.tap-together.data")
 			},
 			(err) => {
 				console.log(`Encountered error: ${err}`)

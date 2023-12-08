@@ -19,7 +19,7 @@ struct Provider: TimelineProvider {
     for hourOffset in 0..<5 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
       let taps =
-        UserDefaults(suiteName: "group.is.pvin.tap-together.widgets")?.integer(forKey: "taps") ?? 0
+        UserDefaults(suiteName: "group.is.pvin.tap-together.data")?.integer(forKey: "taps") ?? 0
       let entry = SimpleEntry(date: entryDate, taps: taps)
       entries.append(entry)
     }

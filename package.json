@@ -22,7 +22,7 @@
     "prebuild": "pnpx expo@latest prebuild"
   },
   "dependencies": {
-    "@alevy97/react-native-userdefaults": "^0.2.1",
+    "@bacons/apple-targets": "https://github.com/EvanBacon/expo-apple-targets/",
     "@types/react": "~18.2.14",
     "expo": "49.0.21",
     "expo-constants": "~14.4.2",

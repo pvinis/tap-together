@@ -1,13 +1,13 @@
 {
-	"extends": "expo/tsconfig.base",
-	"compilerOptions": {
-		"strict": true
-	},
-	"include": [
-		"**/*.ts",
-		"**/*.tsx",
-		".expo/types/**/*.ts",
-		"expo-env.d.ts",
-		"targets/widget/expo-target.config.js"
-	]
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "strict": true
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        ".expo/types/**/*.ts",
+        "expo-env.d.ts",
+        "targets/widget/expo-target.config.js"
+    ]
 }

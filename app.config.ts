@@ -35,7 +35,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 		package: "is.pvin.tap_together",
 		versionCode: packageJson.build,
 	},
-	plugins: ["expo-router", ["@bacons/apple-targets", { teamId: "CAG2W9M777" }]],
+	plugins: ["expo-router", ["@bacons/apple-targets", { appleTeamId: "CAG2W9M777" }]],
 	experiments: { typedRoutes: true },
 	extra: {
 		eas: {

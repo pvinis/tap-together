@@ -1,7 +1,7 @@
 {
   "name": "tap-together",
   "version": "0.2.0",
-  "build": 23,
+  "build": 24,
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",

@@ -38,7 +38,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 	plugins: [
 		"expo-router",
 		["react-native-widget-extension", { frequentUpdates: false, widgetsFolder: "widget" }],
-		["@beacons/apple-targets", { teamId: "118413409" }],
+		["@bacons/apple-targets", { teamId: "118413409" }],
 	],
 	experiments: {
 		typedRoutes: true,

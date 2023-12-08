@@ -6,7 +6,7 @@ import { userUIDAtom } from "../../atoms"
 import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
-import SmartSettings from "local:smart-settings"
+import SmartSettings from "../../../modules/smart-settings"
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)

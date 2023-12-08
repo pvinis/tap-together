@@ -6,10 +6,7 @@ import { userUIDAtom } from "../../atoms"
 import { useAtom } from "jotai"
 import { useRouter } from "expo-router"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
-import { startActivity } from "react-native-widget-extension"
-import UserDefaults from "@alevy97/react-native-userdefaults"
-
-const groupDefaults = new UserDefaults("group.is.pvin.tap-together.widgets")
+import SmartSettings from "../../../modules/smart-settings"
 
 export default function Main() {
 	const [userUID, setUserUID] = useAtom(userUIDAtom)
@@ -17,14 +14,13 @@ export default function Main() {
 	const [taps, setTaps] = useState<number | null>(null)
 
 	useEffect(() => {
-		startActivity("LOL WOW")
 		const query = collection(db, "taps")
 
 		const unsub = onSnapshot(
 			query,
 			async (querySnapshot) => {
 				setTaps(querySnapshot.size)
-				await groupDefaults.set("taps", querySnapshot.size)
+				SmartSettings.set("taps", querySnapshot.size, "group.is.pvin.tap-together.data")
 			},
 			(err) => {
 				console.log(`Encountered error: ${err}`)
@@ -43,7 +39,7 @@ export default function Main() {
 				title="tap tap tap!"
 				onPress={async () => {
 					const tapsRef = collection(db, "taps")
-					await addDoc(tapsRef, { userUID: userUID })
+					await addDoc(tapsRef, { userUID })
 				}}
 			/>
 			<Button

@@ -23,6 +23,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 		config: {
 			usesNonExemptEncryption: false,
 		},
+		entitlements: {
+			"com.apple.security.application-groups": ["group.is.pvin.tap-together.data"],
+		},
 	},
 	android: {
 		adaptiveIcon: {
@@ -32,16 +35,26 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 		package: "is.pvin.tap_together",
 		versionCode: packageJson.build,
 	},
-	plugins: [
-		"expo-router",
-		["react-native-widget-extension", { frequentUpdates: false, widgetsFolder: "widget" }],
-	],
-	experiments: {
-		typedRoutes: true,
-	},
+	plugins: ["expo-router", ["@bacons/apple-targets", { appleTeamId: "CAG2W9M777" }]],
+	experiments: { typedRoutes: true },
 	extra: {
 		eas: {
 			projectId: "9903e8a0-3361-4bdd-abe4-be3890ea1f68",
+			build: {
+				experimental: {
+					ios: {
+						appExtensions: [
+							{
+								bundleIdentifier: "is.pvin.tap-together.widgets",
+								targetName: "widgets",
+								entitlements: {
+									"com.apple.security.application-groups": ["group.is.pvin.tap-together.data"],
+								},
+							},
+						],
+					},
+				},
+			},
 		},
 	},
 })
